@@ -110,7 +110,7 @@ namespace Lab5
         }
 
         //Finds the sum of the list of randomly generated numbers.
-        private int AddList
+        private int AddList()
         {
             int total = 0, index = 0;
             lstNumbers.SelectedIndex = index;
@@ -132,7 +132,7 @@ namespace Lab5
             lstNumbers.SelectedIndex = index;
             do
             {
-                if (int.Parse(lstNumbers.SelectedItem.ToString()) / 2 != 0)
+                if (int.Parse(lstNumbers.SelectedItem.ToString()) % 2 != 0)
                     ++count;
                 index++;
                 if (index < lstNumbers.Items.Count)
@@ -205,7 +205,7 @@ namespace Lab5
                 Swap(ref string1, ref string2);
                 txtString1.Text = string1;
                 txtString2.Text = string2;
-                lblResults = "Strings have been swapped!";
+                lblResults.Text = "Strings have been swapped!";
             }
         }
 
